@@ -69,7 +69,7 @@ document.getElementById('login-btn').addEventListener('click', () => {
     const user = UserProfile.save(nameInput);
     // for stats display 
     document.getElementById('stat-name').innerText = user.username;
-    document.getElementById('stat-games').innerText = user.totalgame ||69 ;
+    document.getElementById('stat-games').innerText = user.totalgame ||0 ;
     document.getElementById('stat-high').innerText = user.highscore || 0;
     document.getElementById('stat-last').innerText = user.joinedDate || "Today";
 
@@ -326,6 +326,14 @@ class QuizManager {
         const button_container = document.getElementById('btn-grid');
         question_container.innerText = `Quiz Finished! Your score: ${this.score}/${this.questions.length}`;
         button_container.innerHTML = `<button class="btn" onclick="location.reload()">Restart Quiz</button>`;
+    }
+    disableButtons(){
+        const buttons = document.querySelectorAll('#btn-grid button');
+        buttons.forEach(btn => {
+        btn.disabled = true;btn.style.cursor = 'not-allowed';
+        btn.style.opacity = '0.8'; 
+    });
+
     }
 }
 
