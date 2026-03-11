@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="login-container" class="main-wrapper">
+    <div class="container" >
+        <h1>Quiz Login</h1>
+        <input type="text" id="username-input" placeholder="Enter your name..." class="btn" style="background: white; color: black; text-align: left;">
+        <button id="login-btn" class="btn">Login</button>
+
+    </div>
+    
+</div> 
+<div id ="stats-box" class="container hide">
+        <h1>Player Stats</h1>
+        <div id="stats-display" >
+            <p>Welcome, <span id="stat-name">---</span>!</p>
+            <p>Games Played: <span id="stat-games">0</span></p>
+            <p>Highest Score: <span id="stat-high">0</span></p>
+            <p>Last Played: <span id="stat-last">Never</span></p>
+        </div>
+        <div id="start-quiz-btn" class ="btn">Start new Quiz</div>
+        
+
+    </div>
+
+<div id="game-setting" class="container hide">
+    <!-- this for setting the specifications of the game  -->
+    <h1>Customize Your Quiz</h1>
+    
+    <div class="setting-group">
+        <label>Topic:</label>
+        <input type="text" id="topic-input" placeholder="e.g. Quantum Physics, 80s Pop" class="btn" style="background: white; color: black; text-align: left;">
+    </div>
+
+    <div class="setting-group">
+        <label>How many questions?</label>
+        <select id="quantity-input" class="btn" style="background: white; color: black;">
+            <option value="5">5 Questions</option>
+            <option value="10">10 Questions</option>
+            <option value="20">20 Questions</option>
+        </select>
+    </div>
+
+    <div class="setting-group">
+        <label>Difficulty Level:</label>
+        <select id="difficulty-input" class="btn" style="background: white; color: black;">
+            <option value="easy">Beginner (Easy)</option>
+            <option value="medium" selected>Intermediate (Medium)</option>
+            <option value="hard">Expert (Hard)</option>
+        </select>
+    </div>
+    <div id="quiz-loader" class="hide">
+        <div class="spinner"></div>
+        <p>AI is crafting your questions...</p>
+    </div>
+    
+
+    <button id="generate-quiz-btn" class="btn">Generate Quiz ✨</button>
+</div>
+<div id="quiz-page" class="main-wrapper hide">
+    <div class="container">
+        <div id="timer-container" style="text-align: right; font-weight: bold; color: red;">
+            Time Left: <span id="time-left">30</span>s
+        </div>
+
+        <div id="question-container">
+            <div id="question" style="font-size: 1.5rem; margin-bottom: 20px;">Question Text appears here</div>
+            <div id="btn-grid" class="btn-grid"></div> 
+        </div>
+
+        <div id="counter" style="margin-top: 15px; font-style: italic;"></div>
+
+        <div class="controls">
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-result" class="container2" style="display:none; margin-top: 20px; padding: 15px; border-radius: 8px; background: #f0f0f0;">
+            Result text...
+        </div>
+        <div id="quiz-controls" class="control-container">
+       <button id="next-btn" class="btn hide">Next Question ➔</button>
+         </div>
+    </div>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script defer src="q2script.js"></script>
+    <title>Document</title>
+</head>
+
+</html>
