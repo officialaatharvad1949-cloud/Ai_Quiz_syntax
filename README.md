@@ -1,6 +1,10 @@
 # Ai_Quiz_syntax
 This is my first github repository .It is a web for Quiz bot integrating with Ai. 
+
+
 // New review After the 3 months. For full review or process documentation . I am attaching the link to my google docs here :https://docs.google.com/document/d/15TaT8KTgQoChNzSEA5jM0ifPDQ7zj18lbfinq64rqeU/edit?usp=sharing
+
+
 What I built:
 An AI-powered Quiz Bot that integrates the Gemini API to generate custom quizzes based on user-selected topics. It features a robust UserProfile system for tracking game statistics and a QuizManager class to orchestrate the quiz flow.
 
